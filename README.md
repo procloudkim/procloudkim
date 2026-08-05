@@ -2,9 +2,15 @@
 
 ### Backend / AI Developer
 
-I build **evidence-grounded, failure-aware AI systems** that preserve provenance, validate state deterministically, and keep consequential actions under human control.
+I build **RAG backends and evidence-grounded AI systems** that make data consistency, failure boundaries, and human authority explicit and testable.
 
 [LinkedIn](https://www.linkedin.com/in/hyungjun-kim/) · [한국어 소개](README.ko.md)
+
+## Backend / AI role fit
+
+- **RAG backend** — In a private individual hiring assignment, redesigned document Q&A around PostgreSQL/pgvector, version-aware cache invalidation, advisory-lock concurrency control, and retry only before the first user-visible SSE delta. Passed the BE/AI assignment; this was not a production deployment.
+- **Workflow automation** — Reduced one cross-team feedback workflow from **11h 19m 40s to 4h 06m 06s** (about **63%**) in a self-recorded before/after comparison using Slack, Google Calendar, and Google Sheets.
+- **Data engineering** — In a five-person training capstone, contributed five public-API research and collection paths, codebooks, manifest/log states, retry rules, S3 Bronze→Silver loading, and KMA incremental ETL fixes. **294,866,718 records** describe the team dataset scope, not my individual output.
 
 ## Engineering focus
 
@@ -12,19 +18,19 @@ I build **evidence-grounded, failure-aware AI systems** that preserve provenance
 - **Failure-aware backends** — separate storage, revision, cache, streaming, and recovery boundaries so failures are observable and recoverable.
 - **Human-controlled agents** — separate model suggestions from authority over transactions, files, deployment, or final decisions.
 
-## Selected systems
+## Selected public systems
 
 ### [Unseen Graph](https://github.com/procloudkim/2026-Call-for-Code-AI-United-Against-Trafficking)
 
-`Responsible AI` · `Deterministic knowledge graph` · `Public demo` · `Team project`
+`Responsible AI` · `Deterministic knowledge graph` · `Public demo` · `Individual project` · `One-person hackathon team`
 
-Contributed to a system that turns **21,386 public UK Modern Slavery Registry records** into a citation-backed human review queue. Ambiguous identities and cases remain on hold instead of becoming unsupported conclusions.
+Designed and built a system that turns **21,386 public UK Modern Slavery Registry records** into a citation-backed human review queue. The hackathon required a team registration, so the individual project was entered as a **one-person team**. Ambiguous identities and cases remain on hold instead of becoming unsupported conclusions.
 
 [Live review workbench](https://procloudkim.github.io/2026-Call-for-Code-AI-United-Against-Trafficking/graph-view/?lang=en&theme=dark) · [Official Top Ten Honors](https://austinaihub.org/case-studies/united-against-trafficking/winners)
 
 After the results, Austin AI Hub extended its six-month AI Hub Incubator beyond the original top five and **invited Unseen Graph to join the founding cohort**, with remote-first mentorship, monthly milestones, and a pathway toward pilot deployment with anti-trafficking organizations.
 
-**Boundary:** review questions, never accusations. The incubator statement is an invitation, not an alumni or completed-program claim. I describe Unseen Graph as a team project until a public contribution record establishes individual module ownership.
+**Boundary:** review questions, never accusations. The incubator statement is an invitation, not an alumni or completed-program claim. “One-person team” describes the human team composition; it does not imply unaided coding, no external tools or libraries, production deployment, or domain adoption.
 
 ### [Mandate Pool](https://github.com/procloudkim/2026-Solana-Google)
 
@@ -46,25 +52,24 @@ Built a reversible context-control plane for long Codex engineering tasks. It pr
 
 **Boundary:** its synthetic economics promotion gate failed, so I position it for integrity, audit, and recovery rather than claiming live cost savings.
 
-## Additional evidence
+<details>
+<summary><strong>Additional public evidence</strong></summary>
 
 - **[Librarian](https://github.com/procloudkim/2026-Global-AI-Hackathon-Series-with-Qwen-Cloud)** — evidence-backed persistent memory with exact-SHA deployment evidence and an explicit promotion `HOLD` when independent validation is missing.
 - **[ReviewHarness](https://github.com/procloudkim/Ralphthon-ICML-2026-Track2)** — locally verified evaluation kernel with injection boundaries; live-provider and human-correlation validation remain unverified.
 - **[Codex Obsidian Knowledge](https://github.com/procloudkim/codex-obsidian-knowledge)** — prerelease, traceable local knowledge capture and publication workflow.
-- **[Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)** — AI-assisted productivity prototype recorded as 6th on the 2026 LipCoding leaderboard; this is a leaderboard result, not a formal award.
+- **[Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)** — AI-assisted productivity prototype recorded as 6th on the 2026 LipCoding leaderboard; this is a leaderboard result, not a formal award, and the leaderboard evidence was only partially reverified in this review.
 
-## Backend and delivery snapshot
+</details>
 
-- Passed a **BE/AI development assignment** after implementing a document-Q&A backend architecture with PostgreSQL + pgvector, corpus-revision cache invalidation, SSE streaming, advisory-lock concurrency control, automated tests, and CI. This was a hiring-assignment artifact, not a production deployment; the source remains private.
-- Reduced a startup's cross-team feedback turnaround from **11h 19m 40s to 4h 06m 06s** (about **63%**) through Slack, Calendar, and Sheets workflow automation.
-- In a five-person data-engineering capstone, defined ingestion contracts and backfill rules for five public APIs covering **294,866,718 auction records** plus agricultural weather data, then supported the AWS Glue, Step Functions, Athena, and QuickSight pipeline.
+## Technologies with project evidence
 
-## Technologies used in projects and assignments
+- **OfficeAgent — private individual hiring assignment:** Python, FastAPI, PostgreSQL, pgvector, SSE, automated tests, CI.
+- **Unseen Graph — individual public project; one-person hackathon team:** deterministic knowledge graph, provenance, human review.
+- **Mandate Pool — individual prototype:** TypeScript, Google ADK / Gemini, Solana Devnet.
+- **Bespin capstone — scoped contribution in a five-person training project:** SQL, Parquet, and S3 in my collection/ETL scope; Glue, Step Functions, Athena, and QuickSight in the team architecture context.
 
-**Backend and data:** Python, FastAPI, REST, SSE, SQL, PostgreSQL, pgvector, SQLite  
-**AI systems:** RAG, retrieval provenance, deterministic knowledge graphs, human-in-the-loop validation  
-**Agent and product systems:** TypeScript, Node.js, Google ADK, Gemini, Solana, WebSocket  
-**Cloud and delivery:** AWS S3, Glue, Step Functions, EventBridge, Athena, QuickSight, Cloud Run, automated tests, CI
+**Current focus:** FastMCP/MCP tool integration and AI-agent service quality through ongoing training and individual study.
 
 ## How I use AI coding tools
 
