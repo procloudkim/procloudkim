@@ -2,9 +2,15 @@
 
 ### Backend / AI Developer
 
-저는 **근거 기반·실패 인지형 AI 시스템**을 만듭니다. 출처와 상태를 보존하고, 결정론적 검증과 사람의 승인을 통해 AI가 무엇을 믿고 실행해도 되는지 경계를 설계합니다.
+저는 **RAG 백엔드와 근거 기반 AI 시스템**에서 데이터 일관성, 실패 경계, 사람의 최종 권한을 명시하고 테스트 가능하게 만듭니다.
 
 [LinkedIn](https://www.linkedin.com/in/hyungjun-kim/) · [English](README.md)
+
+## Backend / AI 직무 연결
+
+- **RAG 백엔드** — 비공개 개인 채용 과제에서 문서 Q&A를 PostgreSQL/pgvector, version-aware cache invalidation, advisory lock 기반 동시성 제어, 첫 사용자-visible SSE delta 이전에만 허용하는 재시도로 재설계했습니다. BE/AI 과제전형을 통과했으며 프로덕션 배포 경험으로 표현하지 않습니다.
+- **업무 자동화** — Slack·Google Calendar·Google Sheets를 연결해 특정 cross-team feedback workflow를 본인 전후 기록 기준 **11시간 19분 40초에서 4시간 06분 06초로 약 63% 단축**했습니다.
+- **데이터 엔지니어링** — 5인 교육 capstone에서 5개 공공 API 조사·수집, codebook, manifest/log 상태, 재시도 기준, S3 Bronze→Silver 적재, KMA 증분 ETL 오류 수정에 기여했습니다. **294,866,718건**은 개인 산출량이 아니라 팀 전체 dataset 범위입니다.
 
 ## 기술 정체성
 
@@ -12,19 +18,19 @@
 - **Failure-aware Backend** — storage, revision, cache, streaming, recovery 경계를 분리해 실패를 관찰·복구 가능하게 만듭니다.
 - **Human-controlled Agents** — 모델의 제안과 transaction, file, deploy, 최종 판단 권한을 분리합니다.
 
-## 대표 시스템
+## 대표 공개 시스템
 
 ### [Unseen Graph](https://github.com/procloudkim/2026-Call-for-Code-AI-United-Against-Trafficking)
 
-`Responsible AI` · `Deterministic knowledge graph` · `Public demo` · `Team project`
+`Responsible AI` · `Deterministic knowledge graph` · `Public demo` · `개인 프로젝트` · `해커톤 등록상 1인 팀`
 
-영국 Modern Slavery Registry 공개 기록 **21,386건**을 출처 인용 기반 human review queue로 전환하는 시스템에 기여했습니다. 불확실한 identity와 case는 근거 없는 결론으로 바꾸지 않고 검토 상태로 보존합니다.
+영국 Modern Slavery Registry 공개 기록 **21,386건**을 출처 인용 기반 human review queue로 전환하는 시스템을 기획·설계·구현했습니다. 해커톤 참가 규정상 team으로 등록했지만 구성원은 본인 한 명인 **1인 팀**이었습니다. 불확실한 identity와 case는 근거 없는 결론으로 바꾸지 않고 검토 상태로 보존합니다.
 
 [Live review workbench](https://procloudkim.github.io/2026-Call-for-Code-AI-United-Against-Trafficking/graph-view/?lang=ko&theme=dark) · [Official Top Ten Honors](https://austinaihub.org/case-studies/united-against-trafficking/winners)
 
 결과 발표 후 Austin AI Hub가 6개월 AI Hub Incubator를 기존 Top 5 밖으로 확대하면서, Unseen Graph는 remote-first mentorship, monthly milestone, anti-trafficking organization과의 pilot pathway를 지원하는 **founding cohort 참여 초청**을 받았습니다.
 
-**경계:** accusations가 아니라 review questions를 제공합니다. Incubator 문구는 초청 사실이며 alumni·과정 수료 주장이 아닙니다. 개인 모듈 소유권을 보여주는 공개 contribution record가 마련되기 전까지 팀 프로젝트로 표현합니다.
+**경계:** accusations가 아니라 review questions를 제공합니다. Incubator 문구는 초청 사실이며 alumni·과정 수료 주장이 아닙니다. `1인 팀`은 사람 팀원의 구성 범위를 뜻하며 AI 보조 없는 수작업, 외부 도구·라이브러리 미사용, 프로덕션 배포, 도메인 도입을 뜻하지 않습니다.
 
 ### [Mandate Pool](https://github.com/procloudkim/2026-Solana-Google)
 
@@ -42,25 +48,24 @@ Gemini의 상품 제안과 돈을 움직이는 권한을 분리한 human-authori
 
 **경계:** synthetic economics promotion gate를 통과하지 못했으므로 비용 절감 도구가 아니라 integrity, audit, recovery controller로 포지셔닝합니다.
 
-## 추가 증거
+<details>
+<summary><strong>추가 공개 증거</strong></summary>
 
 - **[Librarian](https://github.com/procloudkim/2026-Global-AI-Hackathon-Series-with-Qwen-Cloud)** — exact-SHA deployment evidence와 independent validation 부재 시 promotion `HOLD`를 갖는 persistent memory system.
 - **[ReviewHarness](https://github.com/procloudkim/Ralphthon-ICML-2026-Track2)** — injection boundary를 둔 locally verified evaluation kernel. Live provider와 human correlation은 미검증입니다.
 - **[Codex Obsidian Knowledge](https://github.com/procloudkim/codex-obsidian-knowledge)** — traceable local knowledge capture·publication prerelease.
-- **[Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)** — 2026 LipCoding leaderboard 6위로 기록된 AI-assisted productivity prototype. 공식 수상 표현은 사용하지 않습니다.
+- **[Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)** — 2026 LipCoding leaderboard 6위로 기록된 AI-assisted productivity prototype. 공식 수상이 아니며, 이번 검토에서 leaderboard evidence는 부분 검증 상태입니다.
 
-## Backend·Delivery 요약
+</details>
 
-- 문서 Q&A backend architecture를 PostgreSQL + pgvector, corpus-revision cache invalidation, SSE, advisory lock, automated tests, CI로 구현한 **BE/AI 개발 과제전형을 통과**했습니다. 채용 과제 artifact이며 production deployment가 아니고 source는 private입니다.
-- Slack, Calendar, Sheets 자동화로 스타트업 팀 간 feedback turnaround를 **11시간 19분 40초에서 4시간 06분 06초로 약 63% 단축**했습니다.
-- 5인 data-engineering capstone에서 5개 public API의 ingestion contract와 backfill rule을 정의하고, **294,866,718건의 경매 기록**과 농업기상 데이터를 AWS pipeline으로 연결했습니다.
+## 프로젝트 근거가 있는 기술
 
-## 프로젝트·과제에서 사용한 기술
+- **OfficeAgent — 비공개 개인 채용 과제:** Python, FastAPI, PostgreSQL, pgvector, SSE, automated tests, CI.
+- **Unseen Graph — 개인 공개 프로젝트·해커톤 등록상 1인 팀:** deterministic knowledge graph, provenance, human review.
+- **Mandate Pool — 개인 prototype:** TypeScript, Google ADK / Gemini, Solana Devnet.
+- **Bespin capstone — 5인 교육 팀 프로젝트의 제한된 개인 기여:** 개인 수집·ETL 범위의 SQL, Parquet, S3; 팀 아키텍처 맥락의 Glue, Step Functions, Athena, QuickSight.
 
-**Backend and data:** Python, FastAPI, REST, SSE, SQL, PostgreSQL, pgvector, SQLite  
-**AI systems:** RAG, retrieval provenance, deterministic knowledge graph, human-in-the-loop validation  
-**Agent and product systems:** TypeScript, Node.js, Google ADK, Gemini, Solana, WebSocket  
-**Cloud and delivery:** AWS S3, Glue, Step Functions, EventBridge, Athena, QuickSight, Cloud Run, automated tests, CI
+**현재 집중:** 이어드림 스쿨 교육과 개인 학습을 통한 FastMCP/MCP 기반 tool integration, AI-agent service quality.
 
 ## AI coding tool 사용 원칙
 
