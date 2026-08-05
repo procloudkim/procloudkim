@@ -1,0 +1,26 @@
+name: Profile Link Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "README.ko.md"
+      - "scripts/check-external-links.mjs"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Check critical public links
+        run: node scripts/check-external-links.mjs
