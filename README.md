@@ -2,15 +2,15 @@
 
 ### Backend / AI Developer
 
-I build **RAG backends and evidence-grounded AI systems** that make data consistency, failure boundaries, and human authority explicit and testable.
+I build **backend systems for RAG and evidence-grounded AI**, focusing on data consistency, failure boundaries, and human review.
 
 [LinkedIn](https://www.linkedin.com/in/hyungjun-kim/) · [한국어 소개](README.ko.md)
 
 ## Backend / AI role fit
 
-- **RAG backend** — In a private individual hiring assignment, redesigned document Q&A around PostgreSQL/pgvector, version-aware cache invalidation, advisory-lock concurrency control, and retry only before the first user-visible SSE delta. Passed the BE/AI assignment; this was a hiring-assignment artifact, not a production deployment.
-- **Workflow automation** — Reduced one cross-team feedback workflow from **11h 19m 40s to 4h 06m 06s** (about **63%**) in a self-recorded before/after comparison using Slack, Google Calendar, and Google Sheets.
-- **Data engineering** — In a five-person training capstone, contributed five public-API research and collection paths, codebooks, manifest/log states, retry rules, S3 Bronze→Silver loading, and KMA incremental ETL fixes. **294,866,718 records** describe the team dataset scope, not my individual output.
+- **RAG backend — private hiring assignment:** unified document metadata and embeddings in PostgreSQL/pgvector to keep updates within one recovery boundary. Revision checks prevent stale cache writes, per-document transaction-scoped locks serialize conflicting updates, and retries stop after the first user-visible SSE delta. This was a hiring-assignment artifact, not a production deployment.
+- **Workflow automation:** connected Slack, Google Calendar, and Google Sheets for one cross-team handoff workflow. The before/after timing is self-recorded, so I do not present it as an independently reproduced benchmark.
+- **Data engineering — five-person training capstone:** defined collection and retry states for five public APIs and contributed S3 Bronze→Silver loading and KMA incremental ETL fixes.
 
 ## Engineering focus
 
@@ -24,56 +24,37 @@ I build **RAG backends and evidence-grounded AI systems** that make data consist
 
 `Responsible AI` · `Deterministic knowledge graph` · `Public demo` · `Individual project` · `One-person hackathon team`
 
-Designed and built a system that turns **21,386 public UK Modern Slavery Registry records** into a citation-backed human review queue. The hackathon required a team registration, so the individual project was entered as a **one-person team**. Ambiguous identities and cases remain on hold instead of becoming unsupported conclusions.
+Designed and built a system that turns **21,386 public UK Modern Slavery Registry records** into a citation-backed human review queue. The hackathon required team registration, so this individual project was entered as a **one-person team**. The flagging path calls no LLM: exact nonblank company numbers enable cross-year comparison, while name-only or conflicting identities remain on `HOLD`.
 
 [Live review workbench](https://procloudkim.github.io/2026-Call-for-Code-AI-United-Against-Trafficking/graph-view/?lang=en&theme=dark) · [Official Top Ten Honors](https://austinaihub.org/case-studies/united-against-trafficking/winners)
 
-After the results, Austin AI Hub extended its six-month AI Hub Incubator beyond the original top five and **invited Unseen Graph to join the founding cohort**, with remote-first mentorship, monthly milestones, and a pathway toward pilot deployment with anti-trafficking organizations.
+**Recognition:** Top Ten Honors. Austin AI Hub later invited Unseen Graph to the founding cohort of its six-month AI Hub Incubator.
 
-**Boundary:** review questions, never accusations. The incubator statement is an invitation, not an alumni or completed-program claim. “One-person team” describes the human team composition; it does not imply unaided coding, no external tools or libraries, production deployment, or domain adoption.
+**Boundary:** review questions, never accusations. The incubator statement is an invitation, not an alumni, completed-program, or pilot-deployment claim. “One-person team” describes the human team composition; it does not imply unaided coding, no external tools or libraries, production deployment, or domain adoption.
 
 ### [Mandate Pool](https://github.com/procloudkim/2026-Solana-Google)
 
 `TypeScript` · `Google ADK / Gemini` · `Solana Devnet` · `Prototype`
 
-Built a human-authorized agentic-commerce prototype that separates Gemini recommendations from transaction authority. Human confirmation and deterministic budget, product, expiry, and share checks must pass before one atomic three-transfer transaction can be created. Rejected orders produce no signature, transaction, or entitlement.
+Built a human-authorized agentic-commerce prototype that separates Gemini recommendations from transaction authority. Human confirmation and deterministic budget, product, expiry, and share checks must pass before one atomic three-transfer transaction can be created. Rejected orders produce no signature, settlement, or entitlement.
 
 [Demo and evidence ledger](https://github.com/procloudkim/2026-Solana-Google#심사자용-바로가기)
 
-**Boundary:** Devnet test tokens and operator simulation only; this does not establish Mainnet or commercial-payment safety.
+**Boundary:** atomicity is limited to the three transfers inside one Solana transaction; it does not cover Firestore and Solana as one distributed transaction. Devnet test tokens and operator simulation only—not three independent wallet approvals or commercial-payment safety.
 
-### [ContextGC](https://github.com/procloudkim/OpenAI-Build-Week-ContextGC)
+### [ContextGC](https://github.com/procloudkim/2026-OpenAI-Build-Week-ContextGC)
 
 `Codex plugin` · `Typed invariants` · `SHA-256 archive` · `Safety / audit controller`
 
-Built a reversible context-control plane for long Codex engineering tasks. It protects exact constraints as typed invariants, archives sanitized evidence by hash, and blocks lifecycle transitions when checkpoint integrity cannot be verified.
+Built a context-control plane for long Codex engineering tasks. It protects exact constraints as typed invariants, archives sanitized evidence by hash, and blocks lifecycle transitions when checkpoint integrity cannot be verified.
 
-[Hosted evidence explorer](https://contextgc-build-week.trytrytry.chatgpt.site) · [User manual](https://github.com/procloudkim/OpenAI-Build-Week-ContextGC/blob/main/docs/user-manual.md)
+[Hosted evidence explorer](https://contextgc-build-week.trytrytry.chatgpt.site) · [User manual](https://github.com/procloudkim/2026-OpenAI-Build-Week-ContextGC/blob/main/docs/user-manual.md)
 
-**Boundary:** its synthetic economics promotion gate failed, so I position it for integrity, audit, and recovery rather than claiming live cost savings.
-
-<details>
-<summary><strong>Additional public evidence</strong></summary>
-
-- **[Librarian](https://github.com/procloudkim/2026-Global-AI-Hackathon-Series-with-Qwen-Cloud)** — evidence-backed persistent memory with exact-SHA deployment evidence and an explicit promotion `HOLD` when independent validation is missing.
-- **[ReviewHarness](https://github.com/procloudkim/Ralphthon-ICML-2026-Track2)** — locally verified evaluation kernel with injection boundaries; live-provider and human-correlation validation remain unverified.
-- **[Codex Obsidian Knowledge](https://github.com/procloudkim/codex-obsidian-knowledge)** — prerelease, traceable local knowledge capture and publication workflow.
-- **[Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)** — AI-assisted productivity prototype recorded as 6th on the 2026 LipCoding leaderboard; this is a leaderboard result, not a formal award, and the leaderboard evidence was only partially reverified in this review.
-
-</details>
-
-## Technologies with project evidence
-
-- **OfficeAgent — private individual hiring assignment:** Python, FastAPI, PostgreSQL, pgvector, SSE, automated tests, CI.
-- **Unseen Graph — individual public project; one-person hackathon team:** deterministic knowledge graph, provenance, human review.
-- **Mandate Pool — individual prototype:** TypeScript, Google ADK / Gemini, Solana Devnet.
-- **Bespin capstone — scoped contribution in a five-person training project:** SQL, Parquet, and S3 in my collection/ETL scope; Glue, Step Functions, Athena, and QuickSight in the team architecture context.
-
-**Current focus:** FastMCP/MCP tool integration and AI-agent service quality through ongoing training and individual study.
+**Boundary:** SHA-256 provides content addressing and integrity checks, not encryption or authenticity. “Reversible” restores verified context metadata and evidence pointers—not Git state, files, commands, redacted bytes, or external side effects. Its synthetic savings gate failed, so I claim integrity, audit, and recovery—not live cost savings.
 
 ## How I use AI coding tools
 
-I build with Codex and GitHub Copilot. I remain accountable for requirements interpretation, architecture choices, rejected alternatives, acceptance tests, failure boundaries, and every public claim on this profile.
+I build with Codex and GitHub Copilot to compare implementation alternatives and generate candidate tests. I accept changes only after mapping them to explicit invariants, reviewing the diff, running negative-path tests, and reducing public claims when a gate fails. ContextGC's failed synthetic savings gate is one public example.
 
 ## Contact
 

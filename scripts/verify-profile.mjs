@@ -53,6 +53,12 @@ for (const [source, label] of [
   forbidPattern(source, /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i, label);
   forbidPattern(prose, /\bSeoul\b|서울/i, label);
   forbidPattern(prose, /github-readme-stats/i, label);
+  forbidPattern(source, /294,866,718|11h 19m 40s|11시간 19분 40초|(?:약\s*)?63%/i, label);
+  forbidPattern(
+    source,
+    /https:\/\/github\.com\/procloudkim\/OpenAI-Build-Week-ContextGC/i,
+    label,
+  );
 }
 
 requireText(
@@ -67,14 +73,24 @@ requireText(
 );
 requireText(
   profile,
-  "https://github.com/procloudkim/OpenAI-Build-Week-ContextGC",
+  "https://github.com/procloudkim/2026-OpenAI-Build-Week-ContextGC",
   "README.md",
 );
 requireText(profile, "hiring-assignment artifact, not a production deployment", "README.md");
+requireText(profile, "The before/after timing is self-recorded", "README.md");
+requireText(
+  profile,
+  "does not cover Firestore and Solana as one distributed transaction",
+  "README.md",
+);
+requireText(profile, "not encryption or authenticity", "README.md");
 requireText(profile, "I build with Codex and GitHub Copilot", "README.md");
+requireText(profile, "generate candidate tests", "README.md");
+requireText(korean, "독립 재현된 benchmark로 표현하지 않습니다", "README.ko.md");
+requireText(korean, "encryption이나 authenticity를 보장하지 않습니다", "README.ko.md");
 
-if (profile.length > 9_000) {
-  failures.push(`README.md: ${profile.length} characters exceeds the 9,000-character scanability guardrail`);
+if (profile.length > 7_000) {
+  failures.push(`README.md: ${profile.length} characters exceeds the 7,000-character scanability guardrail`);
 }
 
 const headingCount = (profile.match(/^#{1,6}\s/gm) ?? []).length;
@@ -109,7 +125,7 @@ if (failures.length > 0) {
 } else {
   console.log("PROFILE_QA_PASS");
   console.log(`- README.md: ${profile.length} characters, ${headingCount} headings`);
-  console.log("- Required identity, flagship, recognition, and disclosure text present");
-  console.log("- Prohibited overclaims, location, email, and phone-number patterns absent");
+  console.log("- Required identity, flagship, technical-boundary, recognition, and disclosure text present");
+  console.log("- Prohibited overclaims, unsupported headline metrics, stale canonical URL, location, email, and phone-number patterns absent");
   console.log("- Relative Markdown links resolve");
 }
