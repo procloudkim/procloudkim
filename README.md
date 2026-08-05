@@ -8,7 +8,7 @@ I build **RAG backends and evidence-grounded AI systems** that make data consist
 
 ## Backend / AI role fit
 
-- **RAG backend** — In a private individual hiring assignment, redesigned document Q&A around PostgreSQL/pgvector, version-aware cache invalidation, advisory-lock concurrency control, and retry only before the first user-visible SSE delta. Passed the BE/AI assignment; this was not a production deployment.
+- **RAG backend** — In a private individual hiring assignment, redesigned document Q&A around PostgreSQL/pgvector, version-aware cache invalidation, advisory-lock concurrency control, and retry only before the first user-visible SSE delta. Passed the BE/AI assignment; this was a hiring-assignment artifact, not a production deployment.
 - **Workflow automation** — Reduced one cross-team feedback workflow from **11h 19m 40s to 4h 06m 06s** (about **63%**) in a self-recorded before/after comparison using Slack, Google Calendar, and Google Sheets.
 - **Data engineering** — In a five-person training capstone, contributed five public-API research and collection paths, codebooks, manifest/log states, retry rules, S3 Bronze→Silver loading, and KMA incremental ETL fixes. **294,866,718 records** describe the team dataset scope, not my individual output.
 
