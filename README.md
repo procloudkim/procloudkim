@@ -1,6 +1,6 @@
 # Hyung Jun Kim
 
-### Backend / AI Developer
+### AI Builder(Backend / AI Developer)
 
 I build **backend systems for RAG and evidence-grounded AI**, focusing on data consistency, failure boundaries, and human review.
 
