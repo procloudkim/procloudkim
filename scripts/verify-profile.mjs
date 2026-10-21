@@ -34,7 +34,9 @@ for (const [source, label] of [
   [profile, "README.md"],
   [korean, "README.ko.md"],
 ]) {
-  requireText(source, "Backend / AI Developer", label);
+  requireText(source, "Data Engineering · AI Evaluation", label);
+  requireText(source, "https://github.com/procloudkim/factoryscope", label);
+  requireText(source, "https://github.com/procloudkim/samnik-fact-room", label);
   requireText(source, "Unseen Graph", label);
   requireText(source, "Mandate Pool", label);
   requireText(source, "ContextGC", label);
@@ -53,6 +55,7 @@ for (const [source, label] of [
   forbidPattern(source, /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i, label);
   forbidPattern(prose, /\bSeoul\b|서울/i, label);
   forbidPattern(prose, /github-readme-stats/i, label);
+  forbidPattern(prose, /\bCEO\b|채택|사람 판정/, label);
   forbidPattern(source, /294,866,718|11h 19m 40s|11시간 19분 40초|(?:약\s*)?63%/i, label);
   forbidPattern(
     source,
@@ -84,7 +87,7 @@ requireText(
   "README.md",
 );
 requireText(profile, "not encryption or authenticity", "README.md");
-requireText(profile, "I build with Codex and GitHub Copilot", "README.md");
+requireText(profile, "I build with Claude Code, Codex, and GitHub Copilot", "README.md");
 requireText(profile, "generate candidate tests", "README.md");
 requireText(korean, "독립 재현된 benchmark로 표현하지 않습니다", "README.ko.md");
 requireText(korean, "encryption이나 authenticity를 보장하지 않습니다", "README.ko.md");

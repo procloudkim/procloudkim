@@ -1,5 +1,13 @@
 const targets = [
   {
+    label: "FactoryScope repository",
+    url: "https://github.com/procloudkim/factoryscope",
+  },
+  {
+    label: "Samnik Fact Room repository",
+    url: "https://github.com/procloudkim/samnik-fact-room",
+  },
+  {
     label: "Unseen Graph repository",
     url: "https://github.com/procloudkim/2026-Call-for-Code-AI-United-Against-Trafficking",
   },
