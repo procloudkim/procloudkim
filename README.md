@@ -43,9 +43,9 @@ A document Q&A API that answers only from uploaded files: one PostgreSQL transac
 - **[Lease renewal baseline](https://github.com/procloudkim/2026-wanted)** · compares a jeonse renewal offer with actual renewals for the same complex and floor area, from public transaction records. Deployed; no user research or outcome metric.
 - **[Quant Research Observatory](https://github.com/procloudkim/quant-research-showcase)** · static site for an ETF momentum backtest, its verification evidence, and an AI extraction evaluation; the research code is private.
 - **[PUBG Telemetry Watch](https://github.com/procloudkim/pubg-telemetry-watch)** · pre-registered telemetry review: data contract first, thresholds frozen before the data, null result reported as the finding.
-- **[Agricultural weather pipeline](https://github.com/procloudkim/agri-weather-pipeline)** · five-person capstone; I owned one branch, from collection to Bronze-to-Silver cleansing, with per-run quality metadata for row loss. A local backfill reference, not an AWS operating record.
+- **[Agricultural weather pipeline](https://github.com/procloudkim/agri-weather-pipeline)** · five-person capstone; I owned one branch, from collection to Bronze-to-Silver cleansing, with per-run row-loss metadata. A local backfill reference, not an AWS operating record.
 - **[Resumable collector](https://github.com/procloudkim/resumable-collector-fconline)** · solo. File-based resume state and idempotent composite-key UPSERT; I retired two of my own figures after rechecking. Collected data is excluded.
-- **[Three-tier observability](https://github.com/procloudkim/aws-3tier-observability)** · five-person assignment; my part (CloudWatch agents, EC2 IAM role, k6 thresholds) rebuilt in 2026. A teammate ran the load tests, so no improvement figure.
+- **[Three-tier observability](https://github.com/procloudkim/aws-3tier-observability)** · five-person assignment; my part (CloudWatch agents, IAM role, k6 thresholds) rebuilt in 2026. A teammate ran the load tests, so no improvement figure.
 
 ## Hackathon systems
 
@@ -77,9 +77,9 @@ A context-control plane for long Codex tasks: typed invariants protect exact con
 
 ### [Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)
 
-`Node.js` · `GitHub Copilot SDK` · `Azure App Service` · `LipCoding 2026`
+`Node.js` · `GitHub Copilot SDK` · `Azure App Service` · `LipCoding 2026` · `Individual entry`
 
-A productivity app in which a GitHub Copilot SDK agent orders the day's tasks and drafts the first. Recorded 6th of 39 entries on the event leaderboard; not a formal award.
+A productivity app where a GitHub Copilot SDK agent orders the day's tasks and drafts the first. Recorded 6th of 39 entries on the event leaderboard; not a formal award.
 
 **Boundary:** Azure deployment removed after the event; runs locally with a deterministic fallback.
 

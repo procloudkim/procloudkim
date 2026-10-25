@@ -83,7 +83,7 @@ Gemini의 상품 추천과 거래 권한을 분리한 human-authorized agentic c
 
 ### [Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)
 
-`Node.js` · `GitHub Copilot SDK` · `Azure App Service` · `천하제일 입코딩 대회 2026`
+`Node.js` · `GitHub Copilot SDK` · `Azure App Service` · `천하제일 입코딩 대회 2026` · `개인 참여`
 
 GitHub Copilot SDK 에이전트가 하루 할 일의 순서를 정하고 첫 작업의 초안까지 만드는 생산성 웹앱입니다. 대회 순위판에 39팀 가운데 6위로 기록됐으며, 공식 수상은 아닙니다.
 
