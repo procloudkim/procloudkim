@@ -79,7 +79,7 @@ requireText(
   "https://github.com/procloudkim/2026-OpenAI-Build-Week-ContextGC",
   "README.md",
 );
-requireText(profile, "hiring-assignment artifact, not a production deployment", "README.md");
+requireText(profile, "not a production deployment", "README.md");
 requireText(profile, "The before/after timing is self-recorded", "README.md");
 requireText(
   profile,
