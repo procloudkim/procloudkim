@@ -44,7 +44,7 @@
 
 - **[갱신 기준선](https://github.com/procloudkim/2026-wanted)** · 배포된 웹 서비스로, 전세 갱신 제안을 같은 단지·같은 면적대의 실제 갱신 계약과 비교합니다.
 - **[Quant Research Observatory](https://github.com/procloudkim/quant-research-showcase)** · ETF 모멘텀 백테스트와 그 검증 근거를 보여 주는 정적 사이트입니다. 연구 코드는 비공개입니다.
-- **[PUBG Telemetry Watch](https://github.com/procloudkim/pubg-telemetry-watch)** · 매치 telemetry의 룰 기반 이상 신호를, 데이터를 보기 전에 기준을 고정한 protocol로 검토했습니다. 결론은 null result입니다.
+- **[PUBG Telemetry Watch](https://github.com/procloudkim/pubg-telemetry-watch)** · 매치 telemetry의 룰 기반 이상 신호를, 데이터를 보기 전에 기준을 고정한 protocol로 검토했으며, 규칙이 고른 후보가 없었다는 결과(null result)를 그대로 보고합니다.
 - **[농업기상 수집 파이프라인](https://github.com/procloudkim/agri-weather-pipeline)** · 5인 팀 캡스톤입니다. 공공 API 3종의 수집과 Bronze에서 Silver로 가는 정제를 제가 담당했습니다.
 - **[중단을 전제로 한 수집기](https://github.com/procloudkim/resumable-collector-fconline)** · 개인 프로젝트입니다. 재개 상태를 파일로 남기고, UPSERT를 idempotent하게 구성했습니다.
 - **[AWS 3계층 observability](https://github.com/procloudkim/aws-3tier-observability)** · 5인 팀 교육 과제입니다. 제가 맡았던 CloudWatch와 k6 설정을 2026년에 다시 구성했습니다.
@@ -83,7 +83,7 @@ Gemini는 상품을 추천하지만 결제 권한은 없습니다. 사람이 확
 
 GitHub Copilot SDK 에이전트가 하루 할 일의 순서를 정하고, 우선순위가 가장 높은 작업의 초안을 만드는 생산성 웹앱입니다. 천하제일 입코딩 대회 2026 순위판에 출품작 39개 가운데 6위로 기록됐으며, 공식 수상은 아닙니다.
 
-**경계:** 대회 뒤 Azure 리소스를 삭제했습니다. Copilot token과 Copilot CLI 런타임 가운데 하나라도 없으면 앱은 deterministic fallback으로 동작합니다.
+**경계:** 대회 뒤 Azure 리소스를 삭제했습니다. Copilot 인증(token 또는 CLI 로그인)이나 Copilot CLI 런타임이 없으면 앱은 deterministic fallback으로 동작합니다.
 
 ## AI 코딩 도구 사용 원칙
 

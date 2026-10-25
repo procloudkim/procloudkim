@@ -83,7 +83,7 @@ A reversible context-control plane for long Codex tasks: typed invariants protec
 
 A productivity app where a GitHub Copilot SDK agent orders the day's tasks and drafts the top-priority one. Recorded 6th of 39 entries on the LipCoding 2026 leaderboard; not a formal award.
 
-**Boundary:** Azure resources were deleted after the event; if the Copilot token or CLI runtime is missing, the app uses a deterministic fallback.
+**Boundary:** Azure resources were deleted after the event; if Copilot sign-in (token or CLI login) or the CLI runtime is unavailable, the app uses a deterministic fallback.
 
 ## How I use AI coding tools
 
