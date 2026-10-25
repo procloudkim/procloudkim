@@ -12,7 +12,7 @@ node scripts/verify-profile.mjs
 
 The check fails when:
 
-- the role, the two start-here systems, the three hackathon systems, recognition, or AI-assistance disclosure disappears;
+- the role, the start-here systems, the hackathon systems, recognition, or AI-assistance disclosure disappears;
 - a known overclaim, CEO-adoption or human-judgment wording, location, email, or phone-number pattern enters the public README;
 - a relative Markdown link no longer resolves;
 - the English profile exceeds the scanability guardrails of 7,000 characters or 14 headings.

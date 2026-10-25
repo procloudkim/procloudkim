@@ -1,6 +1,6 @@
 # Hyung Jun Kim
 
-### Data Engineering · AI Evaluation
+**Data Engineering · AI Evaluation**
 
 데이터가 어디서 실패했는지 드러나는 data pipeline과, AI의 답을 근거와 대조하는 평가 경로를 만듭니다. 근거가 부족하면 답을 내지 않고 보류하도록 설계합니다.
 
@@ -24,12 +24,23 @@
 
 **경계:** 공개 데모는 종료됐고 로컬 실행 절차를 제공합니다. PostgreSQL 통합 테스트는 현재 공개 릴리스 QA에서 실행하지 못했습니다. 지속 운영, 대규모 트래픽, 성능 우위는 주장하지 않습니다.
 
-## 지금 하는 일
+### [OfficeAgent](https://github.com/procloudkim/2026-OfficeAgent)
 
-**팩타고라 Product Engineer Intern** · 2026년 9월부터. LLM 기반 근거 분류 API의 평가 도구를 개선하는 작업에 참여하고 있습니다. 분석 없이 기본값으로 채워진 응답을 따로 집계하는 기능과, 저장된 실행 기록으로 시험 결과를 다시 만들어 저장본과 대조하는 기능이 그 작업의 일부입니다.
+`FastAPI` · `PostgreSQL/pgvector` · `SSE` · `1인 채용 과제`
+
+업로드한 문서만 근거로 답하는 문서 Q&A API입니다. 업로드 한 번을 PostgreSQL transaction 하나로 처리하고, revision check로 stale cache write를 막고, 문서 단위 lock으로 동시 업로드를 차례로 처리하며, 첫 SSE delta가 사용자에게 전달된 뒤에는 재시도하지 않습니다. [동작 원리](https://github.com/procloudkim/2026-OfficeAgent/blob/main/docs/HOW-IT-WORKS.md)
+
+**경계:** 채용 과제 결과물이며 production에 배포한 시스템이 아닙니다. 교착 가능성을 포함한 알려진 한계는 저장소에 적었습니다.
+
+## 경력
+
+**팩타고라 Product Engineer Intern** · 2026.09.07 – 2026.11.06. LLM 기반 근거 분류 API의 평가 도구를 개선하는 작업에 참여하고 있습니다. 분석 없이 기본값으로 채워진 응답을 따로 집계하는 기능과, 저장된 실행 기록으로 시험 결과를 다시 만들어 저장본과 대조하는 기능이 그 작업의 일부입니다.
+
+**이전 직무:** Slack, Google Calendar, Google Sheets를 연결해 팀 간 handoff workflow 하나를 자동화했습니다. 전후 소요 시간은 직접 기록한 값이므로 독립 재현된 benchmark로 표현하지 않습니다.
 
 ## 다른 공개 시스템
 
+- **[갱신 기준선](https://github.com/procloudkim/2026-wanted)** · 전세 갱신 제안을 같은 단지·면적대의 실제 갱신 계약과 견줘 보는 웹 서비스입니다. 공개 실거래 신고 자료로 계산했습니다. 배포했지만 사용자 조사와 성과 수치는 없습니다.
 - **[Quant Research Observatory](https://github.com/procloudkim/quant-research-showcase)** · ETF 모멘텀 백테스트의 결과와 검증 근거, AI 문서 추출 평가를 보여 주는 정적 사이트입니다. 연구 구현은 비공개라서 결과를 이 저장소에서 다시 실행할 수는 없습니다.
 - **[PUBG Telemetry Watch](https://github.com/procloudkim/pubg-telemetry-watch)** · 매치 telemetry를 pre-registered protocol로 검토했습니다. Data contract를 먼저 정하고 데이터를 보기 전에 threshold를 고정했으며, 그렇게 얻은 null result도 숨기지 않고 결론으로 남겼습니다.
 - **[농업기상 수집 파이프라인](https://github.com/procloudkim/agri-weather-pipeline)** · 5인 팀 프로젝트에서 공공 API 3종의 수집부터 Bronze에서 Silver로 가는 정제까지 한 갈래를 담당했습니다. 실행마다 남긴 quality metadata로 행 손실을 숫자로 확인합니다. AWS 운영 실적이 아니라 로컬 backfill reference implementation입니다.
@@ -70,10 +81,13 @@ Gemini의 상품 추천과 거래 권한을 분리한 human-authorized agentic c
 
 **경계:** SHA-256은 content addressing과 integrity check를 제공하지만 encryption이나 authenticity를 보장하지 않습니다. `Reversible`은 검증된 context metadata와 evidence pointer를 복구한다는 뜻이며, Git state, file, command, redacted byte, external side effect를 되돌린다는 뜻이 아닙니다. Synthetic savings gate를 통과하지 못했으므로 live cost saving은 주장하지 않고 integrity, audit, recovery만 주장합니다.
 
-## 그 밖의 경험
+### [Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)
 
-- **RAG 백엔드(비공개 개인 채용 과제):** document metadata와 embedding을 PostgreSQL/pgvector에 함께 두어 update의 recovery boundary를 하나로 만들었습니다. Revision check로 stale cache write를 막고, 문서 단위 transaction-scoped lock으로 충돌하는 update를 하나씩 처리했으며, 첫 SSE delta가 사용자에게 전달된 뒤에는 재시도하지 않습니다. 채용 과제 결과물이며 production에 배포한 시스템이 아닙니다.
-- **업무 자동화:** Slack, Google Calendar, Google Sheets를 연결해 팀 간 handoff workflow 하나를 자동화했습니다. 전후 소요 시간은 직접 기록한 값이므로 독립 재현된 benchmark로 표현하지 않습니다.
+`Node.js` · `GitHub Copilot SDK` · `Azure App Service` · `천하제일 입코딩 대회 2026`
+
+GitHub Copilot SDK 에이전트가 하루 할 일의 순서를 정하고 첫 작업의 초안까지 만드는 생산성 웹앱입니다. 대회 순위판에 39팀 가운데 6위로 기록됐으며, 공식 수상은 아닙니다.
+
+**경계:** 대회 뒤 Azure 배포를 삭제했습니다. 로컬에서는 deterministic fallback과 함께 실행됩니다.
 
 ## AI 코딩 도구 사용 원칙
 

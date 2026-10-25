@@ -1,6 +1,6 @@
 # Hyung Jun Kim
 
-### Data Engineering · AI Evaluation
+**Data Engineering · AI Evaluation**
 
 I build data pipelines that show where data failed and evaluation paths that check AI answers against their evidence. When evidence is missing, the system holds instead of answering.
 
@@ -12,29 +12,40 @@ I build data pipelines that show where data failed and evaluation paths that che
 
 `Airflow` · `PostgreSQL/TimescaleDB` · `pgvector` · `Individual research`
 
-Validates public bearing-vibration sensor data (NASA IMS) through a fail-closed path of QA, quarantine, idempotent load, and lineage into PostgreSQL/TimescaleDB. Its six-stage Airflow DAG writes a maintenance report only when citation hash, entailment, and equipment scope all verify; otherwise it returns `ABSTAIN`.
+Validates public NASA IMS bearing-vibration data through a fail-closed path of QA, quarantine, idempotent load, and lineage into PostgreSQL/TimescaleDB. It writes a maintenance report only when citation hash, entailment, and equipment scope verify; otherwise `ABSTAIN`.
 
-**Boundary:** not a production system. Detector performance is `INSUFFICIENT_EVIDENCE`; no anomaly-detection claim. Public CI runs fast non-DB checks; the full Docker and PostgreSQL run is a manual release gate.
+**Boundary:** not a production system. Detector performance is `INSUFFICIENT_EVIDENCE`; no anomaly-detection claim. Public CI skips the database; the full PostgreSQL run is a manual release gate.
 
 ### [Samnik Fact Room](https://github.com/procloudkim/samnik-fact-room)
 
 `FastAPI` · `PostgreSQL/pgvector` · `React` · `Individual project`
 
-Shows Samsung Electronics and SK hynix figures from OpenDART filings together with their filing evidence. An answer is confirmed only when company, period, report, consolidated or separate basis, and correction revision all match. Duplicate account labels across statements and revisions once showed valid values as zero; selecting the latest valid revision first, then per-metric statement precedence, fixed it.
+Shows Samsung Electronics and SK hynix OpenDART figures with their filing evidence, confirming an answer only when company, period, report, consolidated or separate basis, and correction revision all match.
 
-**Boundary:** the public demo has ended (local run steps remain), and PostgreSQL integration tests were not run in public release QA. No operations, traffic, or performance claim.
+**Boundary:** the public demo has ended (local run steps remain); PostgreSQL integration tests were not run in release QA. No operations, traffic, or performance claim.
 
-## Current role
+### [OfficeAgent](https://github.com/procloudkim/2026-OfficeAgent)
 
-**Product Engineer Intern, Factagora** · since Sep 2026. Contributing to evaluation tooling for an LLM-based evidence-classification API: a separate count of responses filled with defaults instead of analysis, and a replay that regenerates stored test results and compares them with saved copies.
+`FastAPI` · `PostgreSQL/pgvector` · `SSE` · `Solo hiring assignment`
+
+A document Q&A API that answers only from uploaded files: one PostgreSQL transaction per upload, revision checks against stale cache writes, per-document locks for concurrent uploads, and no retry after the first visible SSE delta. [How it works](https://github.com/procloudkim/2026-OfficeAgent/blob/main/docs/HOW-IT-WORKS.md)
+
+**Boundary:** a hiring-assignment artifact, not a production deployment; known limits, including a possible deadlock, are listed there.
+
+## Work
+
+**Product Engineer Intern, Factagora** · Sep – Nov 2026. Contributing to evaluation tooling for an LLM-based evidence-classification API: a separate count of responses filled with defaults instead of analysis, and a replay that regenerates stored test results and compares them with saved copies.
+
+**Earlier role:** automated one cross-team handoff with Slack, Google Calendar, and Google Sheets. The before/after timing is self-recorded, not an independent benchmark.
 
 ## Other public systems
 
-- **[Quant Research Observatory](https://github.com/procloudkim/quant-research-showcase)** · static site for an ETF momentum backtest, its verification evidence, and an AI document-extraction evaluation. The research code is private, so it cannot be rerun here.
-- **[PUBG Telemetry Watch](https://github.com/procloudkim/pubg-telemetry-watch)** · pre-registered review of match telemetry: data contract first, thresholds frozen before the data, null result reported as the finding.
-- **[Agricultural weather pipeline](https://github.com/procloudkim/agri-weather-pipeline)** · five-person capstone. I owned one branch from collection to Bronze-to-Silver cleansing across three public APIs; per-run quality metadata makes row loss a number. A local backfill reference, not an AWS operating record.
-- **[Resumable collector](https://github.com/procloudkim/resumable-collector-fconline)** · solo. File-based resume state and idempotent composite-key UPSERT. I doubted my own results three times and retired two figures. Collected data is excluded.
-- **[Three-tier observability](https://github.com/procloudkim/aws-3tier-observability)** · five-person assignment; my part rebuilt in 2026: CloudWatch agents, EC2 IAM role, k6 baseline and thresholds. A teammate ran the load tests, so no improvement figure.
+- **[Lease renewal baseline](https://github.com/procloudkim/2026-wanted)** · compares a jeonse renewal offer with actual renewals for the same complex and floor area, from public transaction records. Deployed; no user research or outcome metric.
+- **[Quant Research Observatory](https://github.com/procloudkim/quant-research-showcase)** · static site for an ETF momentum backtest, its verification evidence, and an AI extraction evaluation; the research code is private.
+- **[PUBG Telemetry Watch](https://github.com/procloudkim/pubg-telemetry-watch)** · pre-registered telemetry review: data contract first, thresholds frozen before the data, null result reported as the finding.
+- **[Agricultural weather pipeline](https://github.com/procloudkim/agri-weather-pipeline)** · five-person capstone; I owned one branch, from collection to Bronze-to-Silver cleansing, with per-run quality metadata for row loss. A local backfill reference, not an AWS operating record.
+- **[Resumable collector](https://github.com/procloudkim/resumable-collector-fconline)** · solo. File-based resume state and idempotent composite-key UPSERT; I retired two of my own figures after rechecking. Collected data is excluded.
+- **[Three-tier observability](https://github.com/procloudkim/aws-3tier-observability)** · five-person assignment; my part (CloudWatch agents, EC2 IAM role, k6 thresholds) rebuilt in 2026. A teammate ran the load tests, so no improvement figure.
 
 ## Hackathon systems
 
@@ -42,7 +53,7 @@ Shows Samsung Electronics and SK hynix figures from OpenDART filings together wi
 
 `Responsible AI` · `Deterministic knowledge graph` · `Public demo` · `One-person team`
 
-Turns **21,386 public UK Modern Slavery Registry records** into a citation-backed human review queue. The hackathon required team registration, so this individual project entered as a **one-person team**. The flagging path calls no LLM: exact nonblank company numbers enable cross-year comparison, while name-only or conflicting identities remain on `HOLD`.
+Turns **21,386 public UK Modern Slavery Registry records** into a citation-backed human review queue. The flagging path calls no LLM: only exact nonblank company numbers enable cross-year comparison; name-only or conflicting identities stay on `HOLD`.
 
 [Live review workbench](https://procloudkim.github.io/2026-Call-for-Code-AI-United-Against-Trafficking/graph-view/?lang=en&theme=dark) · [Official Top Ten Honors](https://austinaihub.org/case-studies/united-against-trafficking/winners)
 
@@ -52,7 +63,7 @@ Turns **21,386 public UK Modern Slavery Registry records** into a citation-backe
 
 `TypeScript` · `Google ADK / Gemini` · `Solana Devnet` · `Prototype`
 
-Separates Gemini recommendations from transaction authority: human confirmation and deterministic budget, product, expiry, and share checks must pass before one atomic three-transfer transaction is created. Rejected orders produce no signature, settlement, or entitlement. [Demo and evidence ledger](https://github.com/procloudkim/2026-Solana-Google#심사자용-바로가기)
+Separates Gemini recommendations from transaction authority: a human confirmation and deterministic budget, product, expiry, and share checks gate one atomic three-transfer transaction. [Demo and evidence ledger](https://github.com/procloudkim/2026-Solana-Google#심사자용-바로가기)
 
 **Boundary:** atomicity covers the three transfers in one Solana transaction; it does not cover Firestore and Solana as one distributed transaction. Devnet test tokens and operator simulation only.
 
@@ -60,19 +71,18 @@ Separates Gemini recommendations from transaction authority: human confirmation 
 
 `Codex plugin` · `Typed invariants` · `SHA-256 archive`
 
-A context-control plane for long Codex tasks: typed invariants protect exact constraints, sanitized evidence is archived by hash, and lifecycle transitions stop when checkpoint integrity cannot be verified. [Evidence explorer](https://contextgc-build-week.trytrytry.chatgpt.site) · [User manual](https://github.com/procloudkim/2026-OpenAI-Build-Week-ContextGC/blob/main/docs/user-manual.md)
+A context-control plane for long Codex tasks: typed invariants protect exact constraints, evidence is archived by hash, and transitions stop when checkpoint integrity fails to verify. [Evidence explorer](https://contextgc-build-week.trytrytry.chatgpt.site)
 
-**Boundary:** SHA-256 gives content addressing and integrity checks, not encryption or authenticity. "Reversible" restores metadata and evidence pointers only. The synthetic savings gate failed, so I claim integrity, audit, and recovery, not cost savings.
+**Boundary:** SHA-256 gives content addressing and integrity checks, not encryption or authenticity. The synthetic savings gate failed, so I claim integrity, audit, and recovery, not cost savings.
 
-## Earlier work
+### [Oh-My-DayAuto](https://github.com/procloudkim/2026-MS-Lipcoding-Fin)
 
-- **RAG backend, private hiring assignment:** document metadata and embeddings share one recovery boundary in PostgreSQL/pgvector. Revision checks block stale cache writes, per-document transaction-scoped locks serialize conflicting updates, and retries stop after the first user-visible SSE delta. A hiring-assignment artifact, not a production deployment.
-- **Workflow automation:** connected Slack, Google Calendar, and Google Sheets for one cross-team handoff workflow. The before/after timing is self-recorded, not an independent benchmark.
+`Node.js` · `GitHub Copilot SDK` · `Azure App Service` · `LipCoding 2026`
+
+A productivity app in which a GitHub Copilot SDK agent orders the day's tasks and drafts the first. Recorded 6th of 39 entries on the event leaderboard; not a formal award.
+
+**Boundary:** Azure deployment removed after the event; runs locally with a deterministic fallback.
 
 ## How I use AI coding tools
 
 I build with Claude Code, Codex, and GitHub Copilot to compare implementation alternatives and generate candidate tests. I accept changes only after mapping them to explicit invariants, reviewing the diff, and running negative-path tests, and I lower public claims when a gate fails.
-
-## Contact
-
-[LinkedIn](https://www.linkedin.com/in/hyungjun-kim/)
